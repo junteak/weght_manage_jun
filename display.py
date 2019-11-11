@@ -4,12 +4,9 @@
 https://docs.python.org/ja/3/library/sqlite3.html
 
 '''
-import os
 import sqlite3
 
-
 def display_users():
-    os.system('clear')
 
     connection = sqlite3.connect('weight_manage.db')
     cursor = connection.cursor()

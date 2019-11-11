@@ -21,6 +21,7 @@ def main():
     command_num = int(input(' コマンドを入力してください > '))
 
     if command_num == 1:  # 登録コマンド
+
         name = input("\n 名前を入力してください > ")
 
         # weight = 0  空で作ろうとしたがWhileの中でも生きてる？
@@ -42,7 +43,7 @@ def main():
         main()
 
     if command_num == 3:  # 削除コマンド
-        while True:
+        while True:  # 1,2 以外の数字をいれると動かないようにしてる。
             command_dl_num = int(input('\n 1.全員を消す 2.個人を消す > '))
             if command_dl_num in range(1, 3):  # リストなので in にする。
                 break  # ループから抜け出しその下へ
@@ -66,7 +67,7 @@ def main():
         print('\n 終了しました。')
         sys.exit()
 
-    if not command_num in range(1, 5):  # リストなので in にする。
+    if not command_num in range(1, 5):  # 1~4 以外の数字をいれると動かないようにしてる。リストなので in
         print('\n  注)正しいコマンドを入力して下さい。\n')
         main()
 

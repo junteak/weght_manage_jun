@@ -9,21 +9,20 @@ import sqlite3
 
 
 def main():
-    # インスタンス化
-    connection = sqlite3.connect('weight_manage.db')
+    connection = sqlite3.connect('weight_manage.db')  # インスタンス化して引数名 sqlite3 が開いて weight_manage がテーブル名になる
 
     sql = """create table users (
                 name text,  
                 weight integer
         )"""
 
-    cursor = connection.cursor()
+    cursor = connection.cursor()  # カーソルを出す。マウスのポインタのような。
 
-    cursor.execute(sql)
+    cursor.execute(sql)  # 引数sqlコマンドを実行する。
 
-    connection.commit()
+    connection.commit()  # 保存する
 
-    connection.close()
+    connection.close()  # 閉じる
 
 
 if __name__ == '__main__':

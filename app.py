@@ -41,7 +41,7 @@ def main():
 
 
     if command_num == 2:  # 表示コマンド
-
+        print()
         display_users()
         print()  # 改行
         main()

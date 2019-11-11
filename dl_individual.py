@@ -11,7 +11,7 @@ def dl_indvidual():
     key_users = list(
         dict(users))  # タプルのリストであるusersを 辞書化→リスト化 でキー値が得られる。 http://ututel.blog121.fc2.com/blog-entry-45.html
 
-    num_dlt_indvisual = int(input('\n 削除する人を選んでください。> \n'))
+    num_dlt_indvisual = int(input('\n 削除する人を選んでください。> '))
     name_dlt_indvisual = key_users[num_dlt_indvisual - 1]
 
     connection = sqlite3.connect('weight_manage.db')
@@ -21,4 +21,4 @@ def dl_indvidual():
     connection.commit()
     connection.close()
 
-    print(f' {name_dlt_indvisual}を削除しました。\n')
+    print(f'\n {name_dlt_indvisual}を削除しました。\n')
